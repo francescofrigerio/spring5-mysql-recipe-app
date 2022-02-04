@@ -1,8 +1,17 @@
 spring:
+  # Impostazioni accesso al db mysql
   datasource:
     url: jdbc:mysql://localhost:3306/sfg_prod
     username: sfg_prod_user
     password: guru
+    # Impostazioni jpa di Hibernate
+    # param ddl-auto validate permette di non fare modifiche al db
+    # ma solo entrare e controllare lo schema
+    # param show sql attivo solo in dev
+    # in modo da vedere runtime le istruzioni sql nella console
+    # utile per dev ma non per prod per non intasare i registri
+    # Si puo impostare un profilo attivo direttamente
+    # nella configurazione di esecuzione di IntellJ senza modificare il codice
   jpa:
     hibernate:
       ddl-auto: validate

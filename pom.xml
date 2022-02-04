@@ -60,6 +60,9 @@
 		</dependency>
 
 		<!--MySQL Driver Lesson 311 -->
+		<!-- Non stabiliamo qui la versione del driver -->
+		<!-- delegando a maven di scaricare quello + corretto -->
+		<!-- quindi verra' ereditato dal genitore pom di SpringBoot -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
